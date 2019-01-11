@@ -1,0 +1,3 @@
+﻿1>------ Build started: Project: Space Invaders, Configuration: Debug Any CPU ------
+1>  Space Invaders -> E:\Game\Space Invaders\Space_Invaders.exe
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
