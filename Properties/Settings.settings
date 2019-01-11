@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Space_Invaders.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="TankColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">0, 255, 38</Value>
+    </Setting>
+    <Setting Name="Name" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Guest</Value>
+    </Setting>
+    <Setting Name="BulletColorTank" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">0, 255, 38</Value>
+    </Setting>
+    <Setting Name="InvadersColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">White</Value>
+    </Setting>
+    <Setting Name="BulletColorInvaders" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">White</Value>
+    </Setting>
+    <Setting Name="BulletStyle" Type="System.String" Scope="User">
+      <Value Profile="(Default)">|</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
