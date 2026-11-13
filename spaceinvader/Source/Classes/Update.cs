@@ -17,7 +17,8 @@ namespace Space_Invaders.Classes
                     System.IO.File.Delete(Directorie + "version.txt");
 
                     // create a new webclient instance.
-                    WebClient versioncheck = new WebClient();
+                    using (WebClient versioncheck = new WebClient())
+                    {
 
                     // concatenate the domain with the web resource filename.
                     mystringwebresource = Link;
@@ -56,6 +57,7 @@ namespace Space_Invaders.Classes
             {
                 return false;
             }
+                    }
         }
     }
 }

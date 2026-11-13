@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 
 namespace Space_Invaders.Classes
@@ -9,12 +10,15 @@ namespace Space_Invaders.Classes
         public void HighScoreSet(Game g)
         {
                 SqlConnection con = null;
-                con = new SqlConnection("Server=dedcv2056;Database=dtdbSpaceInvaders;User Id=spaceinvaders;Password=spaceinvaders");
+                con = new SqlConnection(ConfigurationManager.ConnectionStrings["HighscoreConnection"].ConnectionString);
 
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                string query = "insert into highscorelist (Name, Score, Stage, Hits) values ('" + g.Name + "', " + g.Stage + ", " + g.Score + ", " + g.Hits + ")";
-                cmd.CommandText = query;
+                cmd.CommandText = "insert into highscorelist (Name, Score, Stage, Hits) values (@Name, @Score, @Stage, @Hits)";
+                cmd.Parameters.AddWithValue("@Name", g.Name);
+                cmd.Parameters.AddWithValue("@Score", g.Stage);
+                cmd.Parameters.AddWithValue("@Stage", g.Score);
+                cmd.Parameters.AddWithValue("@Hits", g.Hits);
 
                 con.Open();
                 cmd.ExecuteNonQuery();
