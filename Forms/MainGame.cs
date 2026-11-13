@@ -197,7 +197,7 @@ namespace Space_Invaders
         {
             if (monsters.Count > 0)
             {
-                Random rnd = new Random(DateTime.Now.Second);
+                Random rnd = new Random(DateTime.Now.Second); // NOSONAR S2245: only picks which monster shoots, not security-sensitive
                 if (monsterBullet == null)
                 {
                     bool ID = true;
